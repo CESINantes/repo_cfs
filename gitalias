@@ -1,0 +1,10 @@
+[alias]
+	ci = commit -v
+	prune-all = !git remote | xargs -n 1 git remote prune
+	record = !git add -p && git ci
+	amend-record = !git add -p && git ci --amend
+	stoat = !toilet -f future STOATS
+	update-master = !git checkout master && git pull -r
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+
